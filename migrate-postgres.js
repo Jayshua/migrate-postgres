@@ -23,7 +23,7 @@ var initWrapper = function(func) {
       if (commander.debug) global.DEBUG = true;
 
       schema = schema(commander.database, commander.folder || "./");
-      console.log("\n========= pg-migrate ============");
+      console.log("\n========= migrate-postgres ============");
       func.apply(null, arguments);
    };
 };

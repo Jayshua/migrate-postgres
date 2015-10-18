@@ -5,7 +5,7 @@ This is a cli tool used for updating and rolling back a Postgres database based 
 
 
 ## Usage
-pg-migrate [options] [command]
+migrate-postgres [options] [command]
 
 Commands:
 
@@ -22,7 +22,7 @@ Options:
 
 
 ## Defining Migrations
-This tool looks in the current folder for directories containing migration files. The directories should be named with their creation date in standard UNIX timestamp. (Use `pg-schema create` to create a correctly formatted directory.) Each directory should contain an `up.sql` and a `down.sql` file.
+This tool looks in the current folder for directories containing migration files. The directories should be named with their creation date in standard UNIX timestamp. (Use `migrate-postgres create` to create a correctly formatted directory.) Each directory should contain an `up.sql` and a `down.sql` file.
 
 `up.sql` contains the sql statements needed to bring the database to this revision
 
@@ -42,11 +42,11 @@ Given and empty database and a directory like
           \-- down.sql
 
 
-Running `pg-migrate -d "postgres://user:password@localhost.dev/database migrate` will execute the files up.sql in both directories.
+Running `migrate-postgres -d "postgres://user:password@localhost.dev/database migrate` will execute the files up.sql in both directories.
 
-Following that with `pg-migrate -d "postgres://user:password@localhost.dev/database migrate 0` will execute the files down.sql in both directories, resulting again in an empty database. (Assuming down.sql is correctly specified in both directories.)
+Following that with `migrate-postgres -d "postgres://user:password@localhost.dev/database migrate 0` will execute the files down.sql in both directories, resulting again in an empty database. (Assuming down.sql is correctly specified in both directories.)
 
-Running `pg-migrate create` will result in a directory structure like
+Running `migrate-postgres create` will result in a directory structure like
 
     migrations
     +--- 1445047047153
@@ -62,7 +62,7 @@ Running `pg-migrate create` will result in a directory structure like
 
 (Where 1445127772215 is the current timestamp)
 
-Running `pg-migrate -d "postgres://user:password@localhost.dev/database write`
+Running `migrate-postgres -d "postgres://user:password@localhost.dev/database write`
 
 Will write the database schema to a .yml file in the current directory
 

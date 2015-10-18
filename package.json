@@ -1,5 +1,5 @@
 {
-  "name": "pg-migrate",
+  "name": "migrate-postgres",
   "version": "1.0.0",
   "description": "Migrates a postgres database schema, similar to Ruby on Rails migrations.",
   "main": "migrate-postgres.js",

@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Migrates a postgres database schema, similar to Ruby on Rails migrations.",
   "main": "pg-migrate.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Jayshua Nelson",
+  "author": "Jayshua Nelson <me@jayshuanelson.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jayshua/pg-migrate"
+  },
+  "bin" : { "pg-migrate" : "./pg-migrate.js" },
+  "preferGlobal": true,
   "dependencies": {
     "async": "^1.4.2",
     "chalk": "^1.1.1",

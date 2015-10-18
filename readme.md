@@ -1,8 +1,6 @@
 
 Postgres Schema Migration
 =========================
-
-## Description
 This is a cli tool used for updating and rolling back a Postgres database based on sql files that define forward and backward changes. (Think Ruby on Rails Active Record Migrations)
 
 

@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/Jayshua/migrate-postgres"
   },
+  "keywords": ["postgres", "postgresql", "sql", "migrate", "migration", "cli", "database"],
   "bin" : { "migrate-postgres" : "./migrate-postgres.js" },
   "preferGlobal": true,
   "dependencies": {
